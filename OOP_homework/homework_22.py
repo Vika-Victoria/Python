@@ -26,52 +26,52 @@
 # Власник: Олександр
 # Баланс: 1200
 
-# class Wallet:
-#     def __init__(self, owner, balance):
-#         if balance < 0:
-#             raise ValueError('Початковий баланс не може бути від’ємним.')
+class Wallet:
+    def __init__(self, owner, balance):
+        if balance < 0:
+            raise ValueError('Початковий баланс не може бути від’ємним.')
         
-#         self.owner = owner
-#         self.__balance = balance
+        self.owner = owner
+        self.__balance = balance
 
-#     @property
-#     def balance(self):
-#         return self.__balance          
+    @property
+    def balance(self):
+        return self.__balance          
 
-#     def add_money(self, amount):
-#         if amount <= 0:
-#             raise ValueError('Сума поповнення повинна бути більшою за 0.')
+    def add_money(self, amount):
+        if amount <= 0:
+            raise ValueError('Сума поповнення повинна бути більшою за 0.')
 
-#         self.__balance += amount
-#         print(f'Поповнено на {amount} грн.')
-
-
-#     def spend_money(self, amount):
-#         if amount <= 0:
-#             raise ValueError('Сума списання повинна бути більшою за 0.')
-
-#         if amount > self.__balance:
-#             raise ValueError('Недостатньо коштів.')
-
-#         self.__balance -= amount
-#         print(f'Списано {amount} грн.')
-
-#     def show_info(self):
-#         print(f'Власник: {self.owner}')
-#         print(f'Баланс: {self.__balance}') 
+        self.__balance += amount
+        print(f'Поповнено на {amount} грн.')
 
 
-# wallet = Wallet('Олександр', 1000) 
+    def spend_money(self, amount):
+        if amount <= 0:
+            raise ValueError('Сума списання повинна бути більшою за 0.')
 
-# try:
-#     wallet.add_money(500)
-#     wallet.spend_money(300)
-#     wallet.spend_money(2000)
+        if amount > self.__balance:
+            raise ValueError('Недостатньо коштів.')
 
-# except ValueError as error:
-#     print(f'Помилка: {error}')
+        self.__balance -= amount
+        print(f'Списано {amount} грн.')
 
-# wallet.show_info()     
+    def show_info(self):
+        print(f'Власник: {self.owner}')
+        print(f'Баланс: {self.__balance}') 
+
+
+wallet = Wallet('Олександр', 1000) 
+
+try:
+    wallet.add_money(500)
+    wallet.spend_money(300)
+    wallet.spend_money(2000)
+
+except ValueError as error:
+    print(f'Помилка: {error}')
+
+wallet.show_info()     
 
 # Завдання 2. Система керування товаром 
 # Створіть клас Product, який зберігає інформацію про товар у магазині.
