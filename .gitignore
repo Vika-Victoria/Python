@@ -2,3 +2,58 @@
 __pycache__/
 *.py[cod]
 .env
+
+# Віртуальне середовище Python
+venv/
+.venv/
+env/
+ENV/
+ 
+# Кеш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*$py.class
+ 
+# Змінні середовища та секрети
+.env
+.env.*
+!.env.example
+ 
+# Налаштування редакторів
+.vscode/
+.idea/
+ 
+# Тестування
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+ 
+# Збірка та пакети
+build/
+dist/
+*.egg-info/
+.eggs/
+ 
+# Логи
+*.log
+logs/
+ 
+# Тимчасові файли
+*.tmp
+*.temp
+*.bak
+ 
+# Системні файли
+.DS_Store
+Thumbs.db
+ 
+# Jupyter Notebook
+.ipynb_checkpoints/
+ 
+# Локальна база даних SQLite
+*.sqlite3

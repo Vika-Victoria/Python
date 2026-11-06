@@ -1,3 +1,0 @@
-new text addname iphone18
-price 1300
-color black
